@@ -1,20 +1,28 @@
-# Amazon Scrapper API
+# Amazon Scraper API
 
-Amazon Data Scrapper is the easiest way to access to products, prices, sales and review data from amazon in JSON format.
+## Description
 
-This is a Node.js application that uses the Express framework and the request-promise library to create a web API that scrapes data from Amazon.com. 
+Amazon Scraper API is a Node.js application that provides easy access to product data, prices, sales, and reviews from Amazon.com. It allows users to retrieve this data in a convenient JSON format.
 
-The API has three endpoints that allow the user to retrieve different kinds of data related to a specific product on Amazon.com:
+## Features
 
-/products/:productId - This endpoint returns the title, price, rating, and a bar chart of the rating for a given product ID on Amazon.com.
+- Data Scraping: The API utilizes web scraping techniques to extract information from Amazon.com, including product details, prices, ratings, and reviews.
+- Express Framework: The application is built using the Express framework, which provides a robust and efficient web server for handling API requests.
+- Request-Promise Library: The request-promise library is used to simplify HTTP requests and handle asynchronous operations when fetching data from Amazon.com.
+- API Endpoints: The API offers three endpoints for retrieving different types of data related to a specific product on Amazon.com:
+  - `/products/:productId` - Returns the title, price, rating, and rating bar chart for a given product ID.
+  - `/products/:productId/reviews` - Returns a list of reviews and an average rating line chart for a given product ID.
+  - `/products/:productId/offers/chart` - Returns a price distribution chart for offers of a given product ID.
+- Scraper API Key: The application requires a Scraper API Key to access Amazon.com and retrieve the desired data.
+- JSON Response: The API responds to HTTP GET requests with JSON-formatted data, making it easy to integrate with other applications.
+- Error Handling: The application handles errors gracefully and returns error responses in JSON format.
 
-/products/:productId/reviews - This endpoint returns a list of reviews for a given product ID on Amazon.com, along with a line chart of the average rating over time.
+Explain how to use the Amazon Scraper API once it is installed. Provide examples and instructions on how to make HTTP GET requests to the different endpoints and retrieve the desired data. Include information on how to pass the Scraper API Key for authentication purposes.
 
-/products/:productId/offers/chart - This endpoint returns a distribution of prices for offers of a given product ID on Amazon.com in the form of a chart.
+## Technologies Used
 
-The application uses the Scraper API Key to access the Amazon.com website and retrieve the required data. 
-
-The API endpoints are accessed through HTTP GET requests, and the response is returned in JSON format. 
-
-The application also handles errors and returns them in JSON format. 
+- [Node.js](https://nodejs.org/) - A JavaScript runtime environment for building server-side applications.
+- [Express](https://expressjs.com/) - A fast, unopinionated, and minimalist web framework for Node.js.
+- [request-promise](https://www.npmjs.com/package/request-promise) - A simplified HTTP request library for Node.js, used for making HTTP requests to Amazon.com.
+- [Scraper API](https://www.scraperapi.com/) - A web scraping API service used to access Amazon.com and retrieve the required data.
 
